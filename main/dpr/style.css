@@ -1,0 +1,161 @@
+.input-group {
+    width: fit-content !important;
+}
+
+/* Filters CSS */
+
+.filter-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.d-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.filter {
+    padding: 5px;
+    padding-left: 8px;
+    width: 195px;
+    margin: 5px;
+    border-radius: 50px;
+    font-size: 9pt;
+    font-weight: 500;
+}
+
+.filter div::before {
+    font: var(--fa-font-solid);
+    content: "\f0b0";
+}
+
+.filter select {
+    min-width: 60px;
+    max-width: 70px;
+    background-color: transparent;
+    border: 0px solid;
+    font-weight: 500;
+    text-align: end;
+    text-overflow: ellipsis;
+}
+
+option {
+    color: black;
+    font-weight: 500;
+}
+
+/* Filter Color Coding */
+
+.filter:nth-child(1), .filter:nth-child(5) {
+    background-color: rgb(36, 36, 173);
+    color: white;
+}
+
+.filter:nth-child(1) select, .filter:nth-child(5) select, .filter:nth-child(4) select, .filter:nth-child(8) select, .filter:nth-child(4), .filter:nth-child(8) {
+    color: white;
+}
+
+.filter:nth-child(2), .filter:nth-child(6) {
+    background-color: rgb(173, 214, 112);
+}
+
+.filter:nth-child(3), .filter:nth-child(7) {
+    background-color: rgb(248, 229, 124);
+}
+
+.filter:nth-child(4), .filter:nth-child(8) {
+    background-color: rgb(48, 48, 48);
+}
+
+/* Table Container */
+
+.table-container {
+    width: 100%;
+    height: 420px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Table Container Scrollbar */
+
+.table-container::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+  }
+
+.table-container::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DFE9EB;
+}
+  
+.table-container::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+}
+  
+.table-container::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+}
+  
+.table-container::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #3ABEF9;
+}
+  
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #3572EF;
+}
+  
+.table-container::-webkit-scrollbar-thumb:active {
+    background-color: #3572EF;
+}
+
+/* Table CSS */
+
+table {
+    font-size: 9pt;
+    width: 100%;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-color) !important;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid;
+}
+
+thead th:first-child {
+    border-radius: 12px 0px 0px 12px;
+}
+
+thead th:last-child {
+    border-radius: 0px 12px 12px 0px;
+}
+
+tbody {
+    font-weight: 500;
+}
+
+th, td {
+    padding: 8px;
+    min-width: 85px;
+}
+
+td {
+    border-bottom: 2px groove !important;
+}
+
+/* Details */
+
+#details {
+    margin: auto;
+    padding: 5px;
+    width: 52px;
+    background-color: rgb(49, 218, 49);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,282 @@
+:root {
+    --primary-color: #3572EF;
+    --secondary-color: #3ABEF9;
+    --font-fontawesome: "Font Awesome 6 Pro";
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Sidebar CSS */
+
+.sidebar {
+    border-right: 1px #B8C0C2 solid;
+    height: 100%;
+    width: 0px;
+    overflow: hidden;
+    transition: width 1s ease-in-out;
+}
+
+.active {
+    width: 230px;
+}
+
+/* Sidebar Header */
+
+.sidebar-header {
+    height: 60px;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 0px 0px 8px 0px black;
+}
+
+.sidebar-header div {
+    font-size: larger;
+    font-weight: 600;
+    margin: auto;
+}
+
+/* Sidebar Body */
+
+.sidebar-body {
+    border-bottom: 1px #B8C0C2 solid;
+    height: calc(100% - 120px);
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    overflow-y: auto;
+}
+
+/* Sidebar Body Scrollbar */
+
+.sidebar-body::-webkit-scrollbar {
+    height: 7px;
+    width: 5px;
+}
+.sidebar-body::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DFE9EB;
+}
+
+.sidebar-body::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+}
+
+.sidebar-body::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+}
+
+.sidebar-body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #3ABEF9;
+}
+
+.sidebar-body::-webkit-scrollbar-thumb:hover {
+    background-color: #3572EF;
+}
+
+.sidebar-body::-webkit-scrollbar-thumb:active {
+    background-color: #3572EF;
+}
+
+/* Sidebar Body */
+
+.sidebar-item {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px groove #B8C0C2;
+    font-size: smaller;
+    font-weight: 600;
+    color: rgb(36, 36, 173);
+    min-width: 125px !important;
+}
+
+.sidebar-item:hover {
+    color: white;
+    background-color: #3572EF;
+}
+
+.sidebar-collapse {
+    border-bottom: 1px groove #B8C0C2;
+}
+
+.sidebar-collapse div {
+    border: 0px groove black;
+}
+
+.sidebar-item div {
+    text-wrap: nowrap;
+}
+
+.collapse-item1 {
+    font-weight: 600;
+    font-size: smaller;
+    padding: 10px;
+    margin-left: 18px;
+    text-wrap: nowrap;
+    transition: opacity 1s ease-in-out;
+    border-left: 2px solid #3572EF !important;
+}
+
+.collapse-item1:last-of-type {
+    margin-bottom: 5px;
+}
+
+#collapse2 {
+    margin-left: 18px;
+    border-left: 2px solid #3572EF;
+}
+
+.collapse-item2 {
+    font-weight: 600;
+    font-size: smaller;
+    padding: 10px;
+    margin-left: 23px;
+    text-wrap: nowrap;
+    transition: opacity 1s ease-in-out;
+    border-left: 2px solid #3572EF !important;
+}
+
+.collapse-item1:hover, .collapse-item2:hover {
+    color: #3572EF;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+}
+
+.selected {
+    color: white;
+    background-color: #3572EF;
+}
+
+.showAnim { /* Sidebar Animation */
+    opacity: 1;
+}
+
+/* Sidebar Footer */
+
+.sidebar-footer {
+    height: 65px;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.profile-container {
+    height: 100%;
+}
+
+.rounded-circle {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border: 2px solid black;
+    background-color: yellow;
+}
+
+.rounded-circle img {
+    height: 30px;
+    width: auto;
+}
+
+.username {
+    width: 100px;
+    font-size: small;
+    font-weight: 600;
+    font-style: italic;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.logout:hover, .username:hover {
+    color: var(--secondary-color);
+}
+
+/* Main Parent CSS */
+
+.main-parent {
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    overflow: hidden;
+}
+
+/* Header CSS */
+
+.header {
+    height: fit-content;
+    max-height: 60px;
+    flex-wrap: nowrap !important;
+    box-shadow: 0px 0px 8px 0px black;
+    z-index: 50;
+}
+
+.navbar-brand {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: black !important;
+    font-weight: 700;
+}
+
+/* Main Content Scrollbar design */
+
+.main-content {
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: aliceblue !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-content::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+.main-content::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DFE9EB;
+}
+
+.main-content::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+}
+
+.main-content::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #3ABEF9;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background-color: #3572EF;
+}
+
+.main-content::-webkit-scrollbar-thumb:active {
+    background-color: #3572EF;
+}
+
+/* School Year */
+
+.input-group-text {
+    background-color: #cacaca !important;
+}
+
+/* Card CSS */
+
+.card-header {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}

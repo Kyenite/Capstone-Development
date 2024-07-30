@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPMS - Budget Center (Acad)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../header-sidebar.css">
+    <link rel="stylesheet" href="../../../../frameworks/custom.css">
+    <link rel="stylesheet" href="../../../../frameworks/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../frameworks/fontawesome/free/css/all.min.css">
+    <link rel="stylesheet" href="../../../../frameworks/fontawesome/pro/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header d-flex justify-content-center align-content-center">
+            <div class="d-flex align-items-center text-nowrap gap-1">
+                <img src="../../../../images/logo.png" alt="logo.png" height="40">
+                MENU
+            </div>
+        </div>
+        
+        <!-- sidebar body -->
+        <div class="sidebar-body">
+            <div class="sidebar-item" id="dashboard">
+                <div class="menu-icon">
+                    <i class="fa-regular fa-table-columns fa-xl"></i>
+                </div>
+                <div>
+                    Dashboard
+                </div>
+            </div>
+            <div class="sidebar-item" id="dpr">
+                <div class="menu-icon">
+                    <i class="fa-regular fa-money-check-dollar fa-xl"></i>
+                </div>
+                <div>
+                    DPR
+                </div>
+            </div>
+
+            <!-- Sidebar Collapse1 -->
+            <div class="sidebar-collapse">
+                <div class="sidebar-item" href="#collapse1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse1">
+                    <div class="menu-icon">
+                        <i class="fa-regular fa-coins fa-xl"></i>
+                    </div>
+                    <div>
+                        Finance
+                    </div>
+                </div>
+                <div class="collapse" id="collapse1">
+                    <div class="collapse-item1" href="#collapse2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse2">
+                        Budget Center
+                    </div>
+                    <div class="collapse" id="collapse2">
+                        <div class="collapse-item2">Academic</div>
+                        <div class="collapse-item2" id="admin">Admin</div>
+                        <div class="collapse-item2" id="trust_fund">Trust Fund</div>
+                        <div class="collapse-item2" id="auxiliary">Auxiliary</div>
+                    </div>
+                    <div class="collapse-item1" id="institutional">
+                        <div>
+                            Institutional
+                        </div>
+                    </div>
+                    <div class="collapse-item1" id="off_budget">
+                        <div>
+                            Off Budget
+                        </div>
+                    </div>
+                    <div class="collapse-item1" id="petty_cash">
+                        <div>
+                            Petty Cash
+                        </div>
+                    </div>
+                    <div class="collapse-item1" id="reports">
+                        <div>
+                            Reports
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Collapse2 -->
+            <div class="sidebar-collapse">
+                <div class="sidebar-item" href="#collapse3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse3">
+                    <div class="menu-icon">
+                        <i class="fa-regular fa-folder-open fa-xl"></i>
+                    </div>
+                    <div>
+                        Reference
+                    </div>
+                </div>
+                <div class="collapse" id="collapse3">
+                    <div class="collapse-item1" id="budget_code">Budget Code</div>
+                    <div class="collapse-item1" id="office">Office</div>
+                    <div class="collapse-item1" id="payee">Payee</div>
+                </div>
+            </div>
+            <div class="sidebar-item" id="users">
+                <div class="menu-icon">
+                    <i class="fa-regular fa-users fa-xl"></i>
+                </div>
+                <div>
+                    Users
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-footer d-flex align-items-center p-2">
+            <div class="profile-container d-flex align-items-center">
+                <div class="rounded-circle d-flex justify-content-center align-items-center">
+                    <img src="../../../../images/profile/f-3.png" alt="">
+                </div>
+            </div>
+            <div class="username p-1">
+                Username
+            </div>
+            <div class="p-1">
+                <i class="logout fa-regular fa-right-from-bracket" type="button"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Parent -->
+    <div class="main-parent">
+
+        <!-- Header -->
+        <div class="header navbar nav p-3">
+            <div>
+                <i class="sidebar-btn fa-solid fa-bars fa-2xl" type="button" style="color: black;"></i>
+            </div>
+            <div class="navbar-brand p-2">Budget Performance Monitoring System</div>
+            <div class="empty"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content p-4 pt-3">
+
+            <!-- School Year Select -->
+            <div class="mb-3 d-flex justify-content-end">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        School Yr.
+                    </div>
+                    <select class="form-select" name="" id="">
+                        <option value="">2023-2024</option>
+                        <option value="">2024-2025</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="card w-100">
+
+                <!-- Card Header -->
+                <div class="card-header">
+                    Budget Center (Academic)
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body overflow-hidden">
+
+                    <!-- Table -->
+                    <div class="table-container mt-3">
+                        <table class="table table-bordered border-dark text-align-center">
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>CTE</th>
+                                    <th>CAS</th>
+                                    <th>CCJE</th>
+                                    <th>CCIS</th>
+                                    <th>CBM</th>
+                                    <th>CTHM</th>
+                                    <th>NSTP</th>
+                                    <th>SHS</th>
+                                    <th>JHS</th>
+                                    <th>ELEM</th>
+                                    <th>-</th>
+                                    <th>TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Account 1 <br> Actual</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> 1,000</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>10,000 <br> -</td>
+                                    <td>- <br> -</td>
+                                    <td>100,000 <br> -1,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over/Under</td>
+                                    <td>10,000</td>
+                                    <td>9,000</td>
+                                    <td>10,000</td>
+                                    <td>10,000</td>
+                                    <td>10,000</td>
+                                    <td>10,000</td>
+                                    <td>10,000</td>
+                                    <td>10,000</td>
+                                    <td>10,000</td>
+                                    <td>10,000</td>
+                                    <td>-</td>
+                                    <td>(99,000)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+
+                    <!-- Buttons -->
+                    <div class="btn-container">
+                        <div class="d-flex justify-content-end gap-1">
+                            <input class="btn btn-sm btn-secondary" type="button" value="Print Document">
+                            <input class="btn btn-sm btn-warning" type="button" value="Edit">
+                            <input class="btn btn-sm btn-primary" type="button" value="Add Budget">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../../../header-sidebar.js"></script>
+    <script src="../../../../frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../../frameworks/bootstrap/js/popover.min.js"></script>
+</body>
+</html>

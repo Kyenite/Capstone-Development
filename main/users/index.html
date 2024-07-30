@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPMS - User Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../header-sidebar.css">
+    <link rel="stylesheet" href="../../frameworks/custom.css">
+    <link rel="stylesheet" href="../../frameworks/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../frameworks/fontawesome/free/css/all.min.css">
+    <link rel="stylesheet" href="../../frameworks/fontawesome/pro/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header d-flex justify-content-center align-content-center">
+            <div class="d-flex align-items-center text-nowrap gap-1">
+                <img src="../../../images/logo.png" alt="logo.png" height="40">
+                MENU
+            </div>
+        </div>
+        
+        <div class="sidebar-body">
+            <div class="sidebar-item" id="dashboard">
+                <div class="menu-icon">
+                    <i class="fa-regular fa-table-columns fa-xl"></i>
+                </div>
+                <div>
+                    Dashboard
+                </div>
+            </div>
+            <div class="sidebar-item" id="dpr">
+                <div class="menu-icon">
+                    <i class="fa-regular fa-money-check-dollar fa-xl"></i>
+                </div>
+                <div>
+                    DPR
+                </div>
+            </div>
+
+            <!-- Sidebar Collapse1 -->
+            <div class="sidebar-collapse">
+                <div class="sidebar-item" href="#collapse1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse1">
+                    <div class="menu-icon">
+                        <i class="fa-regular fa-coins fa-xl"></i>
+                    </div>
+                    <div>
+                        Finance
+                    </div>
+                </div>
+                <div class="collapse" id="collapse1">
+                    <div class="collapse-item1" href="#collapse2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse2">
+                        Budget Center
+                    </div>
+                    <div class="collapse" id="collapse2">
+                        <div class="collapse-item2" id="academic">Academic</div>
+                        <div class="collapse-item2" id="admin">Admin</div>
+                        <div class="collapse-item2" id="trust_fund">Trust Fund</div>
+                        <div class="collapse-item2" id="auxiliary">Auxiliary</div>
+                    </div>
+                    <div class="collapse-item1" id="institutional">
+                        <div>
+                            Institutional
+                        </div>
+                    </div>
+                    <div class="collapse-item1" id="off_budget">
+                        <div>
+                            Off Budget
+                        </div>
+                    </div>
+                    <div class="collapse-item1" id="petty_cash">
+                        <div>
+                            Petty Cash
+                        </div>
+                    </div>
+                    <div class="collapse-item1" id="reports">
+                        <div>
+                            Reports
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Collapse2 -->
+            <div class="sidebar-collapse">
+                <div class="sidebar-item" href="#collapse3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse3">
+                    <div class="menu-icon">
+                        <i class="fa-regular fa-folder-open fa-xl"></i>
+                    </div>
+                    <div>
+                        Reference
+                    </div>
+                </div>
+                <div class="collapse" id="collapse3">
+                    <div class="collapse-item1" id="budget_code">Budget Code</div>
+                    <div class="collapse-item1" id="office">Office</div>
+                    <div class="collapse-item1" id="payee">Payee</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div class="menu-icon">
+                    <i class="fa-regular fa-users fa-xl"></i>
+                </div>
+                <div>
+                    Users
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-footer d-flex align-items-center p-2">
+            <div class="profile-container d-flex align-items-center">
+                <div class="rounded-circle d-flex justify-content-center align-items-center">
+                    <img src="../../images/profile/f-3.png" alt="">
+                </div>
+            </div>
+            <div class="username p-1">
+                Username
+            </div>
+            <div class="p-1">
+                <i class="logout fa-regular fa-right-from-bracket" type="button"></i>
+            </div>
+        </div>
+    </div>
+    <div class="main-parent">
+        <div class="header navbar nav p-3">
+            <div>
+                <i class="sidebar-btn fa-solid fa-bars fa-2xl" type="button" style="color: black;"></i>
+            </div>
+            <div class="navbar-brand p-2">Budget Performance Monitoring System</div>
+            <div class="empty"></div>
+        </div>
+        <div class="main-content p-5">
+            <div class="card w-100">
+                <div class="card-header">
+                    User Management
+                </div>
+                <div class="card-body overflow-hidden d-block d-lg-flex p-4 gap-3">
+                    <div class="form-container m-auto pb-4 p-lg-0">
+                        <form class="form-card card p-3">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input class="form-control" type="text" id="username" placeholder="Enter Username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginId" class="form-label">LoginId</label>
+                                <input class="form-control" type="number" id="loginId" placeholder="Enter LoginId">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="input-group w-100">
+                                    <input class="form-control" type="password" id="password" placeholder="Assign Password">
+                                    <div class="input-group-text">
+                                        <i class="fa-solid fa-eye" type="button" id="hide-btn"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 input-group">
+                                <label for="role" class="input-group-text">Role</label>
+                                <select class="form-select" name="role" id="role">
+                                    <option value="" selected disabled>Select Role</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="User">User</option>
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-primary btn-sm" type="button">Save User</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="t-container container-fluid d-flex justify-content-center justify-content-lg-end">
+                        <div class="table-container">
+                            <div class="border">
+                                <table class="m-auto text-align-center">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-3">Role</th>
+                                            <th>Username</th>
+                                            <th>LoginId</th>
+                                            <th>Password</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Super Admin</td>
+                                            <td>Medelk705</td>
+                                            <td>202151300</td>
+                                            <td>******</td>
+                                            <td><div class="actions">
+                                                <input class="btn btn-danger btn-sm" type="button" value="Delete">
+                                                <input class="btn btn-primary btn-sm" type="button" value="Update">
+                                            </div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="../header-sidebar.js"></script>
+    <script src="../../frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../frameworks/bootstrap/js/popover.min.js"></script>
+</body>
+</html>
