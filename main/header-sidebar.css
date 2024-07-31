@@ -269,14 +269,25 @@ body {
 /* School Year */
 
 .input-group-text {
-    background-color: #cacaca !important;
+    background-color: #e2e2e2 !important;
 }
 
 /* Card CSS */
 
 .card-header {
+    padding: 12px !important;
     font-size: 14pt;
-    font-weight: bold;
+    font-weight: 600;
     background-color: var(--primary-color) !important;
     color: white !important;
+    overflow: hidden;
+}
+
+.card-header div {
+    border-bottom: 3px solid #B8C0C2;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

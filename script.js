@@ -47,4 +47,4 @@ hideBtn.addEventListener("click", function() {
     }
 
     hidestat = !hidestat;
-})
+});
