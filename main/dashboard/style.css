@@ -142,11 +142,16 @@ tbody {
 
 th, td {
     padding: 8px;
-    min-width: 110px;
+    min-width: 85px;
+}
+
+th {
+    min-width: 95px !important;
 }
 
 td {
     border-bottom: 2px groove !important;
+    white-space: nowrap;
 }
 
 /* Details */
@@ -159,6 +164,30 @@ td {
     color: white;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.approve {
+    color: rgb(60, 219, 60);
+}
+
+.approve::after {
+    content: 'Approved';
+}
+
+.reject {
+    color: red;
+}
+
+.reject::after {
+    content: 'Rejected';
+}
+
+.pending {
+    color: orangered;
+}
+
+.pending::after {
+    content: 'Pending';
 }
 
 @media (max-width: 768px) {

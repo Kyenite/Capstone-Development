@@ -146,10 +146,15 @@ tbody {
 
 th, td {
     padding: 8px;
+}
+
+th {
     min-width: 110px;
 }
 
 td {
+    min-width: fit-content;
+    white-space: nowrap;
     border-bottom: 2px groove !important;
 }
 

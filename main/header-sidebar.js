@@ -65,57 +65,57 @@ const payee = document.getElementById("payee");
 const users = document.getElementById("users");
 
 dashboard.addEventListener("click", function() {
-    window.location.href = "/main/dashboard/index.html";
+    window.location.href = "/Capstone-Development/main/dashboard/index.html";
 });
 
 dpr.addEventListener("click", function() {
-    window.location.href = "/main/dpr/index.html";
+    window.location.href = "/Capstone-Development/main/dpr/index.html";
 });
 
 academic.addEventListener("click", function() {
-    window.location.href = "/main/finance/budget_center/academic/index.html";
+    window.location.href = "/Capstone-Development/main/finance/budget_center/academic/index.html";
 });
 
 admin.addEventListener("click", function() {
-    window.location.href = "/main/finance/budget_center/admin/index.html";
+    window.location.href = "/Capstone-Development/main/finance/budget_center/admin/index.html";
 });
 
 trust_fund.addEventListener("click", function() {
-    window.location.href = "/main/finance/budget_center/trust_fund/index.html";
+    window.location.href = "/Capstone-Development/main/finance/budget_center/trust_fund/index.html";
 });
 
 auxiliary.addEventListener("click", function() {
-    window.location.href = "/main/finance/budget_center/auxiliary/index.html";
+    window.location.href = "/Capstone-Development/main/finance/budget_center/auxiliary/index.html";
 });
 
 institutional.addEventListener("click", function() {
-    window.location.href = "/main/finance/institutional/index.html";
+    window.location.href = "/Capstone-Development/main/finance/institutional/index.html";
 });
 
 off_budget.addEventListener("click", function() {
-    window.location.href = "/main/finance/off_budget/index.html";
+    window.location.href = "/Capstone-Development/main/finance/off_budget/index.html";
 });
 
 petty_cash.addEventListener("click", function() {
-    window.location.href = "/main/finance/petty_cash/index.html";
+    window.location.href = "/Capstone-Development/main/finance/petty_cash/index.html";
 });
 
 reports.addEventListener("click", function() {
-    window.location.href = "/main/finance/report/index.html";
+    window.location.href = "/Capstone-Development/main/finance/report/index.html";
 });
 
 budget_code.addEventListener("click", function() {
-    window.location.href = "/main/reference/budget_code/index.html";
+    window.location.href = "/Capstone-Development/main/reference/budget_code/index.html";
 });
 
 office.addEventListener("click", function() {
-    window.location.href = "/main/reference/office/index.html";
+    window.location.href = "/Capstone-Development/main/reference/office/index.html";
 });
 
 payee.addEventListener("click", function() {
-    window.location.href = "/main/reference/payee/index.html";
+    window.location.href = "/Capstone-Development/main/reference/payee/index.html";
 });
 
 users.addEventListener("click", function() {
-    window.location.href = "/main/users/index.html";
+    window.location.href = "/Capstone-Development/main/users/index.html";
 });

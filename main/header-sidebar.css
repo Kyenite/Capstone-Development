@@ -1,3 +1,5 @@
+@import url(../frameworks/sweetalert2/sweetalert2.min.css);
+
 :root {
     --primary-color: #3572EF;
     --secondary-color: #3ABEF9;
