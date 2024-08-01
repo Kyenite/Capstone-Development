@@ -7,9 +7,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Perform validation and authentication here
     // This is just an example; in a real application, use prepared statements and secure password handling
     if ($loginId === 'admin' && $password === 'password') {
-        echo 'true';
+        echo true;
     } else {
-        echo 'false';
+        echo false;
     }
 } else {
     echo 'Invalid request method';

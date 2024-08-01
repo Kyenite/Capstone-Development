@@ -1,5 +1,5 @@
-const loginId = document.getElementsByTagName("input")[0];
-const password = document.getElementsByTagName("input")[1];
+const loginId = document.getElementById("loginId");
+const password = document.getElementById("password");
 const loginBtn = document.getElementsByClassName("btn")[0];
 
 const hideBtn = document.getElementById("hide-btn");
@@ -28,7 +28,7 @@ function checkLoginCredentials() {
         }
     }
 
-    const data = `loginId=${loginId.value}&password=${password.value}`;
+    const data = `loginId=${encodeURIComponent(loginId.value)}&password=${encodeURIComponent(password.value)}`;
 
     xhr.send(data);
 }
