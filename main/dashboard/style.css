@@ -2,6 +2,15 @@
     width: fit-content !important;
 }
 
+.col-form-label-sm {
+    font-weight: 700;
+}
+
+.modal .form-control, .modal .form-select {
+    font-size: small !important;
+    
+}
+
 /* Add Request Form */
 
 .add-dpr-container {

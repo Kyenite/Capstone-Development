@@ -7,30 +7,7 @@ const hideBtn = document.getElementById("hide-btn");
 // Send Request to login.php
 
 function checkLoginCredentials() {
-    const xhr = new XMLHttpRequest();
-
-    xhr.open('POST', 'login.php', true);
-
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                // Handle the response from the server
-                var Response = xhr.responseText;
-
-                showResult(Response);
-                console.log('Response:', xhr.responseText);
-            } else {
-                showResult(Response, "Invalid login credentials!");
-                console.error('Request failed. Status:', xhr.status);
-            }
-        }
-    }
-
-    const data = `loginId=${encodeURIComponent(loginId.value)}&password=${encodeURIComponent(password.value)}`;
-
-    xhr.send(data);
+    showResult(true);
 }
 
 // Input Value Checker

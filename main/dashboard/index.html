@@ -275,7 +275,7 @@
                                     <td>Seminar</td>
                                     <td>Budget Center</td>
                                     <td>Seminar</td>
-                                    <td><p id="details">Details</p></td>
+                                    <td><p id="details" data-bs-toggle="modal" data-bs-target="#checkDetails">Details</p></td>
                                     <td>1,000</td>
                                     <td><div class="status m-auto pending"></div></td>
                                 </tr>
@@ -287,8 +287,96 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade modal-md" id="checkDetails" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Check Details Info</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-grid gap-2">
+                        <div class="row">
+                            <div class="col-12 col-lg gap-2">
+                                <div>
+                                    <label for="cv-no" class="col-form-label-sm">CV No.</label>
+                                    <input class="form-control" type="number" id="cv-no" disabled>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg">
+                                <div>
+                                    <label for="check-no" class="col-form-label-sm">Check No.</label>
+                                    <input class="form-control" type="number" id="check-no" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-12 col-lg">
+                                <div>
+                                    <label for="payee" class="col-form-label-sm">Payee</label>
+                                    <select class="form-select" id="payee" disabled>
+                                        <option value="" selected disabled>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg">
+                                <div>
+                                    <label for="pettyCash-date" class="col-form-label-sm">Date</label>
+                                    <input class="form-control" type="date" id="pettyCash-date" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-12 col-lg">
+                                <div>
+                                    <label for="pettyCash-amount" class="col-form-label-sm">Amount</label>
+                                    <div class="input-group w-100">
+                                        <div class="input-group-text"><i class="fa-regular fa-peso-sign"></i></div>
+                                        <input class="form-control" type="number" id="pettyCash-amount" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg">
+                                <div>
+                                    <label for="withholding-tax" class="col-form-label-sm">Withholding Tax</label>
+                                    <div class="input-group w-100">
+                                        <div class="input-group-text"><i class="fa-regular fa-peso-sign"></i></div>
+                                        <input class="form-control" type="number" id="withholding-tax" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="difference" class="col-form-label-sm">Difference</label>
+                                    <div class="input-group w-100">
+                                        <div class="input-group-text"><i class="fa-regular fa-peso-sign"></i></div>
+                                        <input class="form-control text-align-center" type="number" id="difference" disabled placeholder="----">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+     </div>
+
     <script src="script.js"></script>
     <script src="../header-sidebar.js"></script>
+    <script src="../../frameworks/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../../frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../frameworks/bootstrap/js/popover.min.js"></script>
 </body>
