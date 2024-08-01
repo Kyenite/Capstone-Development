@@ -39,3 +39,7 @@ input {
 .forget-password {
     font-size: medium;
 }
+
+#hide-btn {
+    cursor: pointer;
+}

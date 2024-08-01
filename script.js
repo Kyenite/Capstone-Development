@@ -1,6 +1,6 @@
 const loginId = document.getElementsByTagName("input")[0];
 const password = document.getElementsByTagName("input")[1];
-const loginBtn = document.getElementsByTagName("input")[2];
+const loginBtn = document.getElementsByClassName("btn")[0];
 
 const hideBtn = document.getElementById("hide-btn");
 
@@ -17,10 +17,12 @@ function checkLoginCredentials() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 // Handle the response from the server
-                showResult(true, xhr.responseText);
+                var Response = xhr.responseText;
+
+                showResult(Response);
                 console.log('Response:', xhr.responseText);
             } else {
-                showResult(false, xhr.responseText);
+                showResult(Response, "Invalid login credentials!");
                 console.error('Request failed. Status:', xhr.status);
             }
         }
@@ -51,7 +53,10 @@ password.addEventListener("input", function() {
 
 loginBtn.addEventListener("click", function() {
     if(loginId.value !== "" && password.value !== ""){
-        checkLoginCredentials();
+        checkLoginCredentials(loginId.value );
+
+        loginBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
+        loginBtn.disabled = true;
     } else {
         loginId.classList.add("is-invalid");
         password.classList.add("is-invalid");
@@ -76,12 +81,17 @@ hideBtn.addEventListener("click", function() {
     hidestat = !hidestat;
 });
 
-function showResult(state ,title) {
+function showResult(state) {
+
+    loginBtn.innerHTML = 'Login';
+    loginBtn.disabled = false;
 
     if(state){
         var iconOutput = "success";
+        var textContent = "Login successful!";
     } else {
         var iconOutput = "error";
+        var textContent = "Invalid login credentials!"
     }
 
     const Toast = Swal.mixin({
@@ -98,6 +108,6 @@ function showResult(state ,title) {
       });
       Toast.fire({
         icon: iconOutput,
-        title: title
+        title: textContent
       });
 }
